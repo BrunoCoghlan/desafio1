@@ -7,7 +7,7 @@ const getJson = () => {
         // se intenta leer el archivo
         data = fs.readFileSync('./citas.json', 'utf8') 
     } catch (error) {
-        // si no se encuentra el archivo por el codigo ENOENT carga un arreglo vacio en data ya que luego se parsea
+        // si no se encuentra el archivo por el codigo ENOENT 'error not entity' carga un arreglo vacio en data ya que luego se parsea
         if (error.code === 'ENOENT'){
             data = '[]'
         }
